@@ -79,6 +79,14 @@ lldb
 (lldb)process connect connect://localhost:1234
 ```
 
+5. 获取应用的ASLR偏移
+在lldb调试器中，执行
+```
+image list -o -f
+```
+找出对应程序的偏移
+
+
 5. lldb设置断点
 ```
 br s -a 0x1234xxx
