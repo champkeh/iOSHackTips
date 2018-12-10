@@ -58,7 +58,8 @@ var vc = #地址
 ## 使用lldb动态调试app
 1. 在Mac上使用tcprelay进行端口转发
 ```
-tcprelay.py -t 1234:1234
+tcprelay.py -t 22:8888 (用于ssh登录)
+tcprelay.py -t 1234:1234 (用于lldb调试)
 ```
 
 2. ssh登录到手机
@@ -69,7 +70,7 @@ ssh 5s
 3. 在手机上启动debugserver
 ```
 ps -e | grep xxx
-debugserver *:1234 -p pid
+debugserver *:1234 -a pid
 ```
 
 4. 在Mac上开启lldb进行调试
