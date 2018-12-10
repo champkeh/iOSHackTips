@@ -85,17 +85,22 @@ lldb
 image list -o -f
 ```
 找出对应程序的偏移
+![ASLR偏移](asserts/images/aslr偏移.png)
 
+6. 修改hopper中的 base address,这样就不用手动计算aslr偏移了
+![](asserts/images/changebaseaddress.png)
 
-5. lldb设置断点
+7. lldb设置断点
 ```
 br s -a 0x1234xxx
 ```
 
 ## 获取目标app的头文件及汇编代码
 1. 从PP助手下载对应app的越狱版本
+![](asserts/images/download_app.png)
 
 2. 将下载的.ipa文件后缀名改为.zip，然后解压出二进制文件
+![](asserts/images/renameipa.png)
 
 3. 导出头文件
 ```
